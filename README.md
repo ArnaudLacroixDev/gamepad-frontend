@@ -2,7 +2,9 @@
 
 ### Preview & direct link to the project:
 
-Coming soon.
+<a href="https://gamepad-project.netlify.app/"><img src="https://res.cloudinary.com/dsggwrmg1/image/upload/v1635521231/Projects%20screens/gamepad_preview_wqrcwm.jpg" alt="Gamepad homescreen" /> </a>
+
+Link: https://gamepad-project.netlify.app/
 
 ### Quick description:
 This project uses
