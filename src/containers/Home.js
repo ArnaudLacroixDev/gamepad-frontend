@@ -96,6 +96,7 @@ const Home = () => {
             );
           })}
         </div>
+
         <div className="page-navigation">
           {pagination(count, page).map((elem, index) => {
             return (

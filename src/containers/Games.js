@@ -44,10 +44,10 @@ const Games = () => {
           alt={data.name}
         />
         <div>
-          <div>
+          <div className="collection-and-review-div">
             <input
-              type="button"
               className="save-collection-button"
+              type="button"
               value="Save to collection"
             />
             <Link to={`/${id}/review`} className="add-review-button">

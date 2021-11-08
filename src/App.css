@@ -180,7 +180,6 @@ header {
 }
 
 .page-navigation input {
-  width: 30px;
   height: 35px;
   color: white;
   background-color: transparent;
@@ -217,9 +216,16 @@ header {
   color: #676767;
 }
 
-.save-collection-button {
-  width: 120px;
+.collection-and-review-div {
+  margin-bottom: 10px;
+}
+
+.save-collection-button,
+.add-review-button {
+  width: 150px;
   height: 60px;
+  box-sizing: border-box;
+  border-radius: 5px;
   font-size: 16px;
   color: white;
   background-color: transparent;
@@ -228,12 +234,6 @@ header {
 
 .save-collection-button:hover {
   cursor: pointer;
-}
-
-.add-review-button {
-  width: 120px;
-  height: 60px;
-  border: 1px solid white;
 }
 
 .about-game {
@@ -329,7 +329,6 @@ header {
 
 /*==================================REVIEW==================================*/
 /*==================================FOOTER==================================*/
-
 .footer-text {
   text-align: end;
   padding: 10px 30px 20px 0px;

@@ -3,10 +3,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useState } from "react";
 import Cookies from "js-cookie";
 
-//components import
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-//Containers import
+
 import Home from "./containers/Home";
 import Games from "./containers/Games";
 import Login from "./containers/Login";
