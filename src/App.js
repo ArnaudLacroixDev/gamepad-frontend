@@ -5,7 +5,6 @@ import Cookies from "js-cookie";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-
 import Home from "./containers/Home";
 import Games from "./containers/Games";
 import Login from "./containers/Login";

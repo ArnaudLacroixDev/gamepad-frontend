@@ -86,8 +86,9 @@ const Games = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="games-like">
         <h4>Games like {data.name}</h4>
+        <p>Display to be added soon...</p>
       </div>
       <div className="reviews-div">
         <h4>Reviews</h4>
@@ -96,10 +97,9 @@ const Games = () => {
             reviews.map((review, index) => {
               return (
                 <div key={index}>
-                  <p>Most relevant reviews</p>
                   <div key={review.id} className="review">
-                    <p>{review.title}</p>
-                    <p>{review.text}</p>
+                    <h5>{review.title}</h5>
+                    <p className="review-text">{review.text}</p>
                   </div>
                 </div>
               );
