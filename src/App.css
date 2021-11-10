@@ -2,8 +2,8 @@
 
 html,
 body {
-  color: white;
-  background-color: black;
+  color: #ffffff;
+  background-color: #000000;
   font-family: "exo", sans-serif;
 }
 
@@ -45,7 +45,7 @@ h5 {
 
 a {
   text-decoration: none;
-  color: white;
+  color: #ffffff;
 }
 
 input {
@@ -92,13 +92,14 @@ header {
 }
 
 .disconnect-button {
-  color: white;
+  color: #ffffff;
   font-size: 20px;
   font-weight: 500;
   font-family: "exo", sans-serif;
   margin-right: 40px;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 /*==================================HOME==================================*/
@@ -186,7 +187,7 @@ header {
 
 .page-navigation input {
   height: 35px;
-  color: white;
+  color: #ffffff;
   background-color: transparent;
   border: none;
   font-size: 20px;
@@ -194,7 +195,7 @@ header {
 
 .page-navigation input:hover {
   cursor: pointer;
-  background-color: grey;
+  background-color: #808080;
   border-radius: 10px;
 }
 
@@ -223,6 +224,7 @@ header {
 
 .collection-and-review-div {
   margin-bottom: 10px;
+  display: flex;
 }
 
 .save-collection-button,
@@ -237,8 +239,15 @@ header {
   border: 1px solid white;
 }
 
-.save-collection-button:hover {
+.save-collection-button {
+  margin-right: 10px;
   cursor: pointer;
+}
+
+.add-review-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-game {
@@ -307,7 +316,7 @@ header {
 
 .login-div,
 .signup-div {
-  width: 400px;
+  width: 425px;
   padding: 100px 30px;
   background: linear-gradient(#171717, #333436);
   border-radius: 0px 20px 20px 0px;
@@ -319,6 +328,7 @@ header {
 .signup-inputs,
 .password-inputs {
   margin: 20px 0px;
+  padding-left: 10px;
   width: 100%;
   height: 45px;
   font-size: 20px;
@@ -339,6 +349,7 @@ header {
 .signup-connexion-button {
   color: white;
   background-color: #ff4655;
+  cursor: pointer;
 }
 
 .email-already-used {
@@ -349,6 +360,73 @@ header {
 /*==================================COLLECTION==================================*/
 
 /*==================================REVIEW==================================*/
+
+.review-div {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 0px auto;
+  padding: 100px 0px;
+}
+
+.review-div h4 {
+  text-align: center;
+}
+
+.review-div form {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0px;
+  padding: 18px;
+  background-color: #2a2b2e;
+  border-radius: 10px;
+}
+
+.review-div input,
+textarea {
+  margin: 10px 0px 10px 0px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.review-title-section {
+  margin-bottom: 10px;
+}
+
+.review-title {
+  width: 300px;
+  height: 30px;
+  color: #ffffff;
+  background-color: #424242;
+  border: none;
+  border-radius: 5px;
+}
+
+.review-description {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 80px;
+  color: #ffffff;
+  background-color: #424242;
+  border: none;
+  border-radius: 5px;
+  resize: none;
+  outline: none;
+}
+
+.publish-button {
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  align-self: flex-end;
+  color: #ffffff;
+  background-color: #ff4655;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 /*==================================FOOTER==================================*/
 .footer-text {
   text-align: end;

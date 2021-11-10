@@ -30,24 +30,25 @@ const Review = () => {
 
   return userToken ? (
     <main>
-      <div>
+      <div className="review-div">
         <h4>Write a review</h4>
         <form onSubmit={handleSubmit}>
-          <div>
-            <p>Review title</p>
+          <div className="review-title-section">
+            <h5>Review title</h5>
             <input
+              className="review-title"
               type="text"
               onChange={(event) => setReviewTitle(event.target.value)}
             />
           </div>
           <div>
-            <p>Review text</p>
-            <input
-              type="text"
+            <h5>Review description</h5>
+            <textarea
+              className="review-description"
               onChange={(event) => setReviewText(event.target.value)}
             />
           </div>
-          <input type="submit" value="Publish" />
+          <input type="submit" value="Publish" className="publish-button" />
         </form>
       </div>
     </main>
