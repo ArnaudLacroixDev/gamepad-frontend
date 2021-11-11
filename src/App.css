@@ -386,7 +386,7 @@ header {
 .review-div {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 600px;
   margin: 0px auto;
   padding: 100px 0px;
 }
@@ -427,7 +427,7 @@ textarea {
 .review-description {
   width: 100%;
   box-sizing: border-box;
-  min-height: 80px;
+  min-height: 100px;
   color: #ffffff;
   background-color: #424242;
   border: none;
