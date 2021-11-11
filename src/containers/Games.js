@@ -43,7 +43,7 @@ const Games = () => {
           src={data.background_image}
           alt={data.name}
         />
-        <div>
+        <div className="game-right-section">
           <div className="collection-and-review-div">
             <input
               className="save-collection-button"
@@ -54,28 +54,28 @@ const Games = () => {
               Add a review
             </Link>
           </div>
-          <div>
-            <div>
+          <div className="table-categories">
+            <div className="category-section">
               <p className="game-desc-grey">Plateforms</p>
-              <p>------------- TO BE DEFINED -------------</p>
+              <p>TBD</p>
             </div>
-            <div>
+            <div className="category-section">
               <p className="game-desc-grey">Genre</p>
               <p>{data.genres[0].name}</p>
             </div>
-            <div>
+            <div className="category-section">
               <p className="game-desc-grey">Release date</p>
               <p>{data.released}</p>
             </div>
-            <div>
+            <div className="category-section">
               <p className="game-desc-grey">Developer</p>
               <p>{data.developers[0].name}</p>
             </div>
-            <div>
+            <div className="category-section">
               <p className="game-desc-grey">Publisher</p>
               <p>{data.publishers[0].name}</p>
             </div>
-            <div>
+            <div className="category-section">
               <p className="game-desc-grey">Age rating</p>
               <p>{data.esrb_rating.id}</p>
             </div>
