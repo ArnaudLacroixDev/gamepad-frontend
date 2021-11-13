@@ -6,8 +6,10 @@ const Collection = () => {
 
   return userToken ? (
     <main>
-      <h3>My collection</h3>
-      <p>This functionnality will be implemented soon.. Stay tuned !</p>
+      <div className="my-collection-div">
+        <h3>My collection</h3>
+        <p>This functionnality will be implemented soon.. Stay tuned !</p>
+      </div>
     </main>
   ) : (
     <Redirect to="/login" />

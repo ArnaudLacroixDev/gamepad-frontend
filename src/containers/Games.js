@@ -33,7 +33,14 @@ const Games = () => {
   }, [id]);
 
   return isLoading ? (
-    <p className="home-loader">En cours de chargement..</p>
+    <main className="loader-div">
+      <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <p>Loading, please wait...</p>
+    </main>
   ) : (
     <main>
       <h3 className="game-name">{data.name}</h3>
