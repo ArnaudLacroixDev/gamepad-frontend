@@ -9,32 +9,38 @@ const Signup = ({ setUser }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [avatar, setAvatar] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [mailError, setMailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+  const [usernameError, setUsernameError] = useState("");
 
   const history = useHistory();
 
   const handleSubmit = async (event) => {
     try {
       event.preventDefault();
-      const response = await axios.post(
-        "https://gamepad-backend-project.herokuapp.com/user/signup",
-        {
-          email: email,
-          username: username,
-          password: password,
-        }
-      );
 
-      if (response.data.token) {
-        setUser(response.data.token);
-        history.push("/");
+      if (password === confirmPassword) {
+        const response = await axios.post(
+          "https://gamepad-backend-project.herokuapp.com/user/signup",
+          {
+            email: email,
+            username: username,
+            password: password,
+          }
+        );
+
+        if (response.data.token) {
+          setUser(response.data.token);
+          history.push("/");
+        }
+      } else {
+        setPasswordError("Passwords don't match !");
       }
     } catch (error) {
-      console.log(error.message);
-
       if (error.response.status === 409) {
-        setErrorMessage("Cet email est déjà utilisé !");
+        setMailError("This email is already used !");
+      } else if (error.response.status === 400) {
+        setUsernameError("Please choose your username");
       }
     }
   };
@@ -52,13 +58,14 @@ const Signup = ({ setUser }) => {
               placeholder="Username..."
               onChange={(event) => setUsername(event.target.value)}
             />
+            <p className="signup-login-errors">{usernameError}</p>
             <input
               className="signup-inputs"
               type="email"
               placeholder="Email..."
               onChange={(event) => setEmail(event.target.value)}
             />
-            <p className="email-already-used">{errorMessage}</p>
+            <p className="signup-login-errors">{mailError}</p>
             <div className="password-div">
               <input
                 className="password-inputs"
@@ -73,13 +80,7 @@ const Signup = ({ setUser }) => {
                 onChange={(event) => setConfirmPassword(event.target.value)}
               />
             </div>
-
-            <input
-              type="file"
-              onChange={(event) => {
-                setAvatar(event.target.files[0]);
-              }}
-            />
+            <p className="signup-login-errors">{passwordError}</p>
             <input
               className="signup-inputs signup-connexion-button"
               type="submit"

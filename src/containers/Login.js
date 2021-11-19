@@ -9,6 +9,7 @@ const Login = ({ setUser }) => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loginError, setLoginError] = useState("");
 
   const handleSubmit = async (event) => {
     try {
@@ -27,7 +28,9 @@ const Login = ({ setUser }) => {
         history.push("/");
       }
     } catch (error) {
-      console.log(error.message);
+      if (error.response.status === 401) {
+        setLoginError("Wrong e-mail and/or password !");
+      }
     }
   };
 
@@ -50,6 +53,7 @@ const Login = ({ setUser }) => {
               placeholder="Password..."
               onChange={(event) => setPassword(event.target.value)}
             />
+            <p className="signup-login-errors">{loginError}</p>
             <input
               className="login-inputs signup-connexion-button"
               type="submit"

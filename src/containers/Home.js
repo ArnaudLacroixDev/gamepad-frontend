@@ -61,7 +61,7 @@ const Home = () => {
 
   return isLoading ? (
     <main className="loader-div">
-      <div class="loader">
+      <div className="loader">
         <span></span>
         <span></span>
         <span></span>
