@@ -1,3 +1,4 @@
+import "./Collection.css";
 import Cookies from "js-cookie";
 import { Redirect } from "react-router-dom";
 
@@ -6,7 +7,7 @@ const Collection = () => {
 
   return userToken ? (
     <main>
-      <div className="my-collection-div">
+      <div className="collection-div">
         <h3>My collection</h3>
         <p>This functionnality will be implemented soon.. Stay tuned !</p>
       </div>

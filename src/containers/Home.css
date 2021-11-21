@@ -1,0 +1,95 @@
+/*-------------------SEARCH DIV-------------------*/
+.home-loader {
+  width: 1200px;
+  margin: 20px auto;
+}
+
+.home-search-div {
+  width: 600px;
+  margin: 0px auto;
+  padding: 50px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-title {
+  display: flex;
+  justify-content: center;
+}
+
+.home-searchbar-div {
+  display: flex;
+  justify-content: center;
+}
+
+.home-searchbar {
+  width: 500px;
+  height: 60px;
+  margin: 10px 0px;
+  padding-left: 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+}
+
+.home-total-games {
+  height: 25px;
+  font-size: 19px;
+  text-align: center;
+}
+
+/*-------------------GAME LIST-------------------*/
+
+.home-most-relevance-games-div {
+  margin: 0px 30px;
+}
+
+.home-most-relevance-games-div h3 {
+  margin: 20px 0px;
+}
+
+.home-most-relevance-games-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.home-game-card {
+  position: relative;
+}
+
+.home-game-image {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 15px 0px;
+}
+
+.home-game-title {
+  position: absolute;
+  top: 80%;
+  left: 5%;
+  font-size: 17px;
+}
+
+/*-------------------PAGE NAVIGATION-------------------*/
+
+.home-page-navigation {
+  padding: 30px 0px;
+  text-align: center;
+}
+
+.home-page-navigation input {
+  height: 35px;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+}
+
+.home-page-navigation input:hover {
+  cursor: pointer;
+  background-color: #808080;
+  border-radius: 10px;
+}

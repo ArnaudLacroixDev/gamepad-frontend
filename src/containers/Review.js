@@ -1,3 +1,4 @@
+import "./Review.css";
 import axios from "axios";
 import { useState } from "react";
 import Cookies from "js-cookie";
@@ -48,7 +49,11 @@ const Review = () => {
               onChange={(event) => setReviewText(event.target.value)}
             />
           </div>
-          <input type="submit" value="Publish" className="publish-button" />
+          <input
+            type="submit"
+            value="Publish"
+            className="review-submit-button"
+          />
         </form>
       </div>
     </main>

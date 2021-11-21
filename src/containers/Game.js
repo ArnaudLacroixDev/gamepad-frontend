@@ -1,11 +1,12 @@
+import "./Game.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
 const Games = () => {
   const [data, setData] = useState();
-  const [isLoading, setIsLoading] = useState(true);
   const [reviews, setReviews] = useState();
+  const [isLoading, setIsLoading] = useState(true);
 
   const { id } = useParams();
 
@@ -13,17 +14,15 @@ const Games = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://gamepad-backend-project.herokuapp.com/games/${id}`
+          `https://gamepad-backend-project.herokuapp.com/game/${id}`
         );
 
         const reviews = await axios.get(
-          `https://gamepad-backend-project.herokuapp.com/games/reviews/${id}`
+          `https://gamepad-backend-project.herokuapp.com/game/reviews/${id}`
         );
 
-        setReviews(reviews.data);
-        console.log("console.log de reviews dans le useEffect ===>", reviews);
         setData(response.data);
-
+        setReviews(reviews.data);
         setIsLoading(false);
       } catch (error) {
         console.error(error.message);
@@ -51,62 +50,58 @@ const Games = () => {
           alt={data.name}
         />
         <div className="game-right-section">
-          <div className="collection-and-review-div">
+          <div className="game-collection-and-review-div">
             <input
-              className="save-collection-button"
+              className="game-save-collection-button"
               type="button"
               value="Save to collection"
             />
-            <Link to={`/${id}/review`} className="add-review-button">
+            <Link to={`/${id}/review`} className="game-add-review-button">
               Add a review
             </Link>
           </div>
-          <div className="table-categories">
-            <div className="category-section">
+          <div className="game-table-categories">
+            <div className="game-category-section">
               <p className="game-desc-grey">Plateforms</p>
               <p>TBD</p>
             </div>
-            <div className="category-section">
+            <div className="game-category-section">
               <p className="game-desc-grey">Genre</p>
               <p>{data.genres[0].name}</p>
             </div>
-            <div className="category-section">
+            <div className="game-category-section">
               <p className="game-desc-grey">Release date</p>
               <p>{data.released}</p>
             </div>
-            <div className="category-section">
+            <div className="game-category-section">
               <p className="game-desc-grey">Developer</p>
               <p>{data.developers[0].name}</p>
             </div>
-            <div className="category-section">
+            <div className="game-category-section">
               <p className="game-desc-grey">Publisher</p>
               <p>{data.publishers[0].name}</p>
             </div>
-            <div className="category-section">
+            <div className="game-category-section">
               <p className="game-desc-grey">Age rating</p>
               <p>{data.esrb_rating.id}</p>
             </div>
             <div>
               <p className="game-desc-grey">About</p>
-              <p className="about-game">{data.description}</p>
+              <p className="game-about-game">{data.description}</p>
             </div>
           </div>
         </div>
       </div>
-      <div className="games-like">
-        <h4>Games like {data.name}</h4>
-        <p>Display to be added soon...</p>
-      </div>
-      <div className="reviews-div">
+      <div className="game-reviews-div">
         <h4>Reviews</h4>
         <div>
           {reviews.length > 0 ? (
             reviews.map((review, index) => {
               return (
                 <div key={index}>
-                  <div key={review.id} className="review">
+                  <div key={review.id} className="game-review">
                     <h5>{review.title}</h5>
-                    <p className="review-text">{review.text}</p>
+                    <p className="game-review-text">{review.text}</p>
                   </div>
                 </div>
               );

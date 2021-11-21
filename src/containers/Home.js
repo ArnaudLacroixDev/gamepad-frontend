@@ -1,7 +1,10 @@
+import "./Home.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/img/gamepad-logo.svg";
+
+import Loader from "../components/Loader";
 
 const Home = () => {
   const [data, setData] = useState();
@@ -47,7 +50,7 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://gamepad-backend-project.herokuapp.com?search=${search}&page=${page}`
+          `https://gamepad-backend-project.herokuapp.com/?search=${search}&page=${page}`
         );
         setData(response.data);
         setCount(response.data.count);
@@ -60,51 +63,44 @@ const Home = () => {
   }, [page, search]);
 
   return isLoading ? (
-    <main className="loader-div">
-      <div className="loader">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <p>Loading, please wait...</p>
-    </main>
+    <Loader />
   ) : (
     <main>
-      <div className="search-div">
+      <div className="home-search-div">
         <div className="home-title">
           <img src={Logo} alt="Logo" />
           <h2>Gamepad</h2>
         </div>
-        <div className="searchbar-div">
+        <div className="home-searchbar-div">
           <input
-            className="searchbar"
+            className="home-searchbar"
             type="search"
             placeholder="Search for a game..."
             onChange={(event) => setSearch(event.target.value)}
           />
         </div>
-        <p className="total-games">Search in the {data.count} games</p>
+        <p className="home-total-games">Search in the {data.count} games</p>
       </div>
-      <div className="most-relevance-games-div">
+      <div className="home-most-relevance-games-div">
         <h3>Most relevance games</h3>
-        <div className="most-relevance-games-list">
+        <div className="home-most-relevance-games-list">
           {data.results.map((game) => {
             return (
-              <div key={game.id} className="game-card">
-                <Link to={`/games/${game.id}`}>
+              <div key={game.id} className="home-game-card">
+                <Link to={`/game/${game.id}`}>
                   <img
-                    className="game-image"
+                    className="home-game-image"
                     src={game.background_image}
                     alt={game.name}
                   />
-                  <p className="game-title">{game.name}</p>
+                  <p className="home-game-title">{game.name}</p>
                 </Link>
               </div>
             );
           })}
         </div>
 
-        <div className="page-navigation">
+        <div className="home-page-navigation">
           {pagination(count, page).map((elem, index) => {
             return (
               <input

@@ -1,0 +1,47 @@
+header {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ff4655;
+}
+
+.header-left {
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  width: 31px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-login-button {
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: 40px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background-color: #ff4655;
+}
+
+.header-collection-button {
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: 40px;
+}
+
+.header-disconnect-button {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "exo", sans-serif;
+  margin-right: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

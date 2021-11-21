@@ -1,0 +1,64 @@
+.review-div {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin: 0px auto;
+  padding: 100px 0px;
+}
+
+.review-div h4 {
+  text-align: center;
+}
+
+.review-div form {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0px;
+  padding: 18px;
+  background-color: #2a2b2e;
+  border-radius: 10px;
+}
+
+.review-div input,
+.review-div textarea {
+  margin: 10px 0px 10px 0px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.review-title-section {
+  margin-bottom: 10px;
+}
+
+.review-title {
+  width: 300px;
+  height: 30px;
+  color: #ffffff;
+  background-color: #424242;
+  border: none;
+  border-radius: 5px;
+}
+
+.review-description {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 100px;
+  color: #ffffff;
+  background-color: #424242;
+  border: none;
+  border-radius: 5px;
+  resize: none;
+}
+
+.review-submit-button {
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  align-self: flex-end;
+  color: #ffffff;
+  background-color: #ff4655;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

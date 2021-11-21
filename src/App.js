@@ -6,7 +6,7 @@ import Cookies from "js-cookie";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./containers/Home";
-import Games from "./containers/Games";
+import Game from "./containers/Game";
 import Login from "./containers/Login";
 import Signup from "./containers/Signup";
 import Review from "./containers/Review";
@@ -38,8 +38,8 @@ function App() {
         <Route path="/signup">
           <Signup setUser={setUser} />
         </Route>
-        <Route path="/games/:id">
-          <Games />
+        <Route path="/game/:id">
+          <Game />
         </Route>
         <Route path="/:id/review">
           <Review />
