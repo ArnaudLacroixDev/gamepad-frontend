@@ -100,19 +100,42 @@ const Home = () => {
           })}
         </div>
 
-        <div className="home-page-navigation">
-          {pagination(count, page).map((elem, index) => {
-            return (
-              <input
-                key={index}
-                type="button"
-                value={elem}
-                onClick={() => {
-                  setPage(elem);
-                }}
-              />
-            );
-          })}
+        <div className="home-navigation">
+          <input
+            type="button"
+            value="<"
+            onClick={() => {
+              setPage(page - 1);
+            }}
+            className="home-navigation-input home-inactive-page-button"
+          />
+          <div>
+            {pagination(count, page).map((elem, index) => {
+              return (
+                <input
+                  key={index}
+                  type="button"
+                  value={elem}
+                  onClick={() => {
+                    setPage(elem);
+                  }}
+                  className={
+                    elem !== page
+                      ? "home-navigation-input"
+                      : "home-navigation-input home-active-page-button"
+                  }
+                />
+              );
+            })}
+          </div>
+          <input
+            type="button"
+            value=">"
+            onClick={() => {
+              setPage(page + 1);
+            }}
+            className="home-navigation-input home-inactive-page-button"
+          />
         </div>
       </div>
     </main>

@@ -1,0 +1,67 @@
+.global-login-div,
+.global-signup-div {
+  width: 800px;
+  height: 530px;
+  margin: 0px auto;
+  padding: 150px 0px;
+  font-size: 17px;
+  display: flex;
+}
+
+.how-it-works {
+  width: 400px;
+  padding: 100px 30px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(#333436, #171717);
+  border-right: 2px solid #ff4655;
+  border-radius: 20px 0px 0px 20px;
+}
+
+.how-it-works-desc {
+  margin: 20px 0px;
+}
+
+.login-div,
+.signup-div {
+  width: 425px;
+  padding: 100px 30px;
+  background: linear-gradient(#171717, #333436);
+  border-radius: 0px 20px 20px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-inputs,
+.signup-inputs,
+.password-inputs {
+  margin: 20px 0px;
+  padding-left: 10px;
+  width: 100%;
+  height: 45px;
+  box-sizing: border-box;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+}
+
+.password-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.password-inputs {
+  width: 47%;
+}
+
+.signup-connexion-button {
+  color: white;
+  background-color: #ff4655;
+  cursor: pointer;
+}
+
+.signup-login-errors {
+  color: red;
+  font-weight: bold;
+}
