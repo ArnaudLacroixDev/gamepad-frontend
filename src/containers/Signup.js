@@ -85,7 +85,7 @@ const Signup = ({ setUser }) => {
             <input
               className="signup-inputs signup-connexion-button"
               type="submit"
-              value="S'inscrire"
+              value="Sign up"
             />
           </form>
           <Link to="/login">You already have an account ? Click here !</Link>
